@@ -1,0 +1,9 @@
+{
+  "name": "ElasticExportFashionDE",
+  "description": "This plugin adds the format FashionDE to the Elastic Export.",
+  "namespace": "ElasticExportFashionDE",
+  "author": "plentymarkets",
+  "type": "export",
+  "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider",
+  "version": 0.1
+}
