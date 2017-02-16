@@ -189,7 +189,7 @@ class FashionDE extends CSVGenerator
             'art_versand'       => $shippingCost,
             'art_sale_preis'    => number_format((float)$rrp, 2, ',', ''),
             'art_geschlecht'    => $this->elasticExportCoreHelper->getItemCharacterByBackendName($this->idlVariations[$variation['id']], $settings, 'article_gender'),
-            'art_grundpreis'    => $this->elasticExportCoreHelper->getBasePrice($variation, $this->idlVariations[$variation['id']], '/', false, false, '', $rrp > 0 ? $rrp : $price),
+            'art_grundpreis'    => $this->elasticExportCoreHelper->getBasePrice($variation, $this->idlVariations[$variation['id']], $settings->get('lang'), '/', false, false, '', $rrp > 0 ? $rrp : $price),
         ];
 
         return $data;
