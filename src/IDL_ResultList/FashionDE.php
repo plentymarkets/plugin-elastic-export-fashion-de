@@ -18,9 +18,10 @@ class FashionDE
      *
      * @param array $variationIds
      * @param KeyValue $settings
+     * @param array $filter
      * @return RecordList|string
      */
-    public function getResultList($variationIds, $settings)
+    public function getResultList($variationIds, $settings, array $filter = [])
     {
         if(is_array($variationIds) && count($variationIds) > 0)
         {
@@ -29,6 +30,15 @@ class FashionDE
                     'id' => $variationIds
                 )
             );
+
+            if(array_key_exists('variationStock.netPositive' ,$filter))
+            {
+                $searchFilter['variationStock.netPositive'] = $filter['variationStock.netPositive'];
+            }
+            elseif(array_key_exists('variationStock.isSalable' ,$filter))
+            {
+                $searchFilter['variationStock.isSalable'] = $filter['variationStock.isSalable'];
+            }
 
             $resultFields = array(
                 'itemBase' => array(

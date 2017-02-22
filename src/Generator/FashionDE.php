@@ -2,7 +2,7 @@
 
 namespace ElasticExportFashionDE\Generator;
 
-use ElasticExportCore\Helper\ElasticExportCoreHelper;
+use ElasticExport\Helper\ElasticExportCoreHelper;
 use Plenty\Modules\DataExchange\Contracts\CSVGenerator;
 use Plenty\Modules\Helper\Services\ArrayHelper;
 use Plenty\Modules\Item\DataLayer\Models\Record;
@@ -42,13 +42,11 @@ class FashionDE extends CSVGenerator
     /**
      * FashionDE constructor.
      *
-     * @param ElasticExportCoreHelper $elasticExportCoreHelper
      * @param ArrayHelper $arrayHelper
      * @param AttributeValueNameRepositoryContract $attributeValueNameRepository,
      */
-    public function __construct(ElasticExportCoreHelper $elasticExportCoreHelper, ArrayHelper $arrayHelper, AttributeValueNameRepositoryContract $attributeValueNameRepository)
+    public function __construct(ArrayHelper $arrayHelper, AttributeValueNameRepositoryContract $attributeValueNameRepository)
     {
-        $this->elasticExportCoreHelper = $elasticExportCoreHelper;
         $this->arrayHelper = $arrayHelper;
         $this->attributeValueNameRepository = $attributeValueNameRepository;
     }
@@ -58,9 +56,12 @@ class FashionDE extends CSVGenerator
      *
      * @param array $resultData
      * @param array $formatSettings
+     * @param array $filter
      */
-    protected function generateContent($resultData, array $formatSettings = [])
+    protected function generateContent($resultData, array $formatSettings = [], array $filter = [])
     {
+        $this->elasticExportCoreHelper = pluginApp(ElasticExportCoreHelper::class);
+
         if(is_array($resultData) && count($resultData['documents']) > 0)
         {
             $settings = $this->arrayHelper->buildMapFromObjectList($formatSettings, 'key', 'value');
@@ -100,7 +101,7 @@ class FashionDE extends CSVGenerator
                  * @var \ElasticExportFashionDE\IDL_ResultList\FashionDE $idlResultList
                  */
                 $idlResultList = pluginApp(\ElasticExportFashionDE\IDL_ResultList\FashionDE::class);
-                $idlResultList = $idlResultList->getResultList($variationIdList, $settings);
+                $idlResultList = $idlResultList->getResultList($variationIdList, $settings, $filter);
             }
 
             // Creates an array with the variationId as key to surpass the sorting problem
