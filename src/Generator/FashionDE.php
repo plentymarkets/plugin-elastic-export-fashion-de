@@ -3,7 +3,7 @@
 namespace ElasticExportFashionDE\Generator;
 
 use ElasticExport\Helper\ElasticExportCoreHelper;
-use Plenty\Modules\DataExchange\Contracts\CSVGenerator;
+use Plenty\Modules\DataExchange\Contracts\CSVPluginGenerator;
 use Plenty\Modules\Helper\Services\ArrayHelper;
 use Plenty\Modules\Item\DataLayer\Models\Record;
 use Plenty\Modules\Item\DataLayer\Models\RecordList;
@@ -16,7 +16,7 @@ use Plenty\Modules\Item\Attribute\Models\AttributeValueName;
  * Class FashionDE
  * @package ElasticExportFashionDE\Generator
  */
-class FashionDE extends CSVGenerator
+class FashionDE extends CSVPluginGenerator
 {
     /**
      * @var ElasticExportCoreHelper
@@ -58,7 +58,7 @@ class FashionDE extends CSVGenerator
      * @param array $formatSettings
      * @param array $filter
      */
-    protected function generateContent($resultData, array $formatSettings = [], array $filter = [])
+    protected function generatePluginContent($resultData, array $formatSettings = [], array $filter = [])
     {
         $this->elasticExportCoreHelper = pluginApp(ElasticExportCoreHelper::class);
 

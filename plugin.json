@@ -16,5 +16,9 @@
   ],
   "author": "plentymarkets GmbH",
   "authorIcon": "icon_author_xs.png",
-  "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider"
+  "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider",
+  "require":
+  {
+    "ElasticExport": 0.1
+  }
 }
