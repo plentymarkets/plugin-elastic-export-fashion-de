@@ -10,6 +10,8 @@ Für weitere Informationen und eine persönliche Beratung steht Ihnen unser Port
 
 ## Elastic Export FashionDE-Plugin in plentymarkets einrichten
 
+Um dieses Format nutzen zu können, benötigen Sie das Plugin Elastic Export.
+
 Nachdem Sie das Elastic Export Fashion.de Plugin im plentyMarketplace gekauft haben, richten Sie das Exportformat wie auf der Handbuchseite [Daten exportieren](https://www.plentymarkets.eu/handbuch/datenaustausch/daten-exportieren/#4) beschrieben ein.
 
 ## Lizenz
