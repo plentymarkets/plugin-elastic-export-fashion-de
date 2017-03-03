@@ -1,6 +1,6 @@
 ![plentymarkets Logo](http://www.plentymarkets.eu/layout/pm/images/logo/plentymarkets-logo.jpg)
 
-# Elastic Export Fashion.de Plugin for plentymarkets 7
+# ElasticExportFashionDE Plugin for plentymarkets 7
 
 This is the elastic export Fashion.de plugin for plentymarkets 7 which extends the list of possible export formats.
 The elastic export is used to create export formats for price search engines, price comparison portals, markets and affiliate service providers.
