@@ -1,4 +1,4 @@
-plentymarkets plugin Elastic Export Fashion.de
+plentymarkets plugin ElasticExportFashionDE
 
 Copyright © 2016 plentymarkets GmbH
 
