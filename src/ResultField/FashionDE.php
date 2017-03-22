@@ -129,10 +129,15 @@ class FashionDE extends ResultFields
                 'attributes.attributeValueSetId',
             ],
             [
-                $imageMutator,
                 $languageMutator,
             ],
         ];
+
+        // Get the associated images if reference is selected
+        if($reference != -1)
+        {
+            $fields[1][] = $imageMutator;
+        }
 
         foreach($itemDescriptionFields as $itemDescriptionField)
         {
