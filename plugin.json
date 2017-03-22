@@ -2,7 +2,7 @@
   "name": "ElasticExportFashionDE",
   "namespace": "ElasticExportFashionDE",
   "type": "export",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "marketplaceName": {
     "de":"Fashion.de",
     "en":"Fashion.de"
