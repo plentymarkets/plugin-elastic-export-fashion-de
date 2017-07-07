@@ -189,6 +189,22 @@ class FashionDE extends CSVPluginGenerator
 							]);
 						}
 					}
+
+					//add the last batch
+					foreach($this->group as $data)
+					{
+						if(array_key_exists('art_farbe', $data) && is_array($data['art_farbe']))
+						{
+							$data['art_farbe'] = implode(', ', $data['art_farbe']);
+						}
+
+						if(array_key_exists('art_groesse', $data) && is_array($data['art_groesse']))
+						{
+							$data['art_groesse'] = implode(', ', $data['art_groesse']);
+						}
+
+						$this->addCSVContent(array_values($data));
+					}
 				}
 			} while ($elasticSearch->hasNext());
 		}
