@@ -226,7 +226,7 @@ class FashionDE extends CSVPluginGenerator
 			'art_url'           => $this->elasticExportCoreHelper->getMutatedUrl($variation, $settings),
 			'art_img_url'       => $this->elasticExportCoreHelper->getMainImage($variation, $settings),
 			'waehrung'          => $priceList['currency'],
-			'art_preis'         => number_format((float)$price, 2, ',', ''),
+			'art_preis'         => (float)$price,
 			'art_marke'         => substr(trim($this->elasticExportCoreHelper->getExternalManufacturerName((int)$variation['data']['item']['manufacturer']['id'])), 0, 20),
 			'art_farbe'         => [],
 			'art_groesse'       => [],
