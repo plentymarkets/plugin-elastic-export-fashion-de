@@ -89,7 +89,7 @@ class FashionDE extends CSVPluginGenerator
 
 		$settings = $this->arrayHelper->buildMapFromObjectList($formatSettings, 'key', 'value');
 
-		$this->setDelimiter(" ");
+		$this->setDelimiter("	");
 
 		$this->addCSVContent([
 			'art_nr',
@@ -221,11 +221,18 @@ class FashionDE extends CSVPluginGenerator
 	{
 		// Get and set the price and rrp
 		$priceList = $this->elasticExportPriceHelper->getPriceList($variation, $settings, 2, ',');
-		$rrp = $priceList['recommendedRetailPrice'];
-		$price = $priceList['price'];
+		$price = $priceList['recommendedRetailPrice'] < $priceList['price'] ? $priceList['recommendedRetailPrice'] : $priceList['price'];
+		$rrp = $priceList['recommendedRetailPrice'] < $priceList['price'] ? $priceList['price'] : $priceList['recommendedRetailPrice'];
 
-		$price = $rrp > $price ? $rrp : $price;
-		$rrp = $rrp > $price ? $price : $rrp;
+		if($price <= 0)
+		{
+			$price = '';
+		}
+
+		if($rrp <= 0)
+		{
+			$rrp =  '';
+		}
 
 		// Get shipping costs
 		$shippingCost = $this->elasticExportCoreHelper->getShippingCost($variation['data']['item']['id'], $settings);
