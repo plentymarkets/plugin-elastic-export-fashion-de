@@ -55,7 +55,7 @@ class FashionDE extends CSVPluginGenerator
 	/**
 	 * @var array
 	 */
-	private $group;
+	private $item;
 
 	/**
 	 * FashionDE constructor.
@@ -154,12 +154,12 @@ class FashionDE extends CSVPluginGenerator
 
 							if(is_null($previousItemId) || $currentItemId == $previousItemId)
 							{
-								$this->buildGroup($variation, $settings);
+								$this->variationGrouper($variation, $settings);
 								$previousItemId = $currentItemId;
 							}
 							elseif(!is_null($previousItemId) && $currentItemId != $previousItemId)
 							{
-								foreach($this->group as $data)
+								foreach($this->item as $data)
 								{
 									if(array_key_exists('art_farbe', $data) && is_array($data['art_farbe']))
 									{
@@ -174,9 +174,9 @@ class FashionDE extends CSVPluginGenerator
 									$this->addCSVContent(array_values($data));
 								}
 
-								unset($this->group);
+								unset($this->item);
 
-								$this->buildGroup($variation, $settings);
+								$this->variationGrouper($variation, $settings);
 								$previousItemId = $currentItemId;
 							}
 							$lines = $lines +1;
@@ -191,7 +191,7 @@ class FashionDE extends CSVPluginGenerator
 					}
 
 					//add the last batch
-					foreach($this->group as $data)
+					foreach($this->item as $data)
 					{
 						if(array_key_exists('art_farbe', $data) && is_array($data['art_farbe']))
 						{
@@ -289,25 +289,29 @@ class FashionDE extends CSVPluginGenerator
 		return $variationAttributes;
 	}
 
-	private function buildGroup($variation, $settings)
+	/**
+	 * @param $variation
+	 * @param $settings
+	 */
+	private function variationGrouper($variation, $settings)
 	{
-		if(!array_key_exists($variation['data']['item']['id'], $this->group))
+		if(!array_key_exists($variation['data']['item']['id'], $this->item))
 		{
-			$this->group[$variation['data']['item']['id']] = $this->getMain($variation, $settings);
+			$this->item[$variation['data']['item']['id']] = $this->getMain($variation, $settings);
 		}
 
-		if(array_key_exists($variation['data']['item']['id'], $this->group) && count($variation['data']['attributes']) > 0)
+		if(array_key_exists($variation['data']['item']['id'], $this->item) && count($variation['data']['attributes']) > 0)
 		{
 			$variationAttributes = $this->getVariationAttributes($variation, $settings);
 
 			if(array_key_exists('Color', $variationAttributes))
 			{
-				$this->group[$variation['data']['item']['id']]['art_farbe'] = array_unique(array_merge($this->group[$variation['data']['item']['id']]['art_farbe'], $variationAttributes['Color']));
+				$this->item[$variation['data']['item']['id']]['art_farbe'] = array_unique(array_merge($this->item[$variation['data']['item']['id']]['art_farbe'], $variationAttributes['Color']));
 			}
 
 			if(array_key_exists('Size', $variationAttributes))
 			{
-				$this->group[$variation['data']['item']['id']]['art_groesse'] = array_unique(array_merge($this->group[$variation['data']['item']['id']]['art_groesse'], $variationAttributes['Size']));
+				$this->item[$variation['data']['item']['id']]['art_groesse'] = array_unique(array_merge($this->item[$variation['data']['item']['id']]['art_groesse'], $variationAttributes['Size']));
 			}
 		}
 	}
