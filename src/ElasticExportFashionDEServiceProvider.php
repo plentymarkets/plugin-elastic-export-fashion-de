@@ -31,7 +31,8 @@ class ElasticExportFashionDEServiceProvider extends DataExchangeServiceProvider
             'ElasticExportFashionDE\ResultField\FashionDE',
             'ElasticExportFashionDE\Generator\FashionDE',
             '',
-            true
+            true,
+			true
         );
     }
 }

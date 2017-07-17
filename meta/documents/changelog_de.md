@@ -1,5 +1,11 @@
 # Release Notes für Elastic Export Fashion.de
 
+## v1.0.4 (2017-06-30)
+
+### Geändert
+- Das Formatplugin basiert nun nur noch auf Elastic Search.
+- Die Performance wurde verbessert.
+
 ## v1.0.3 (2017-05-24)
 
 ### Geändert

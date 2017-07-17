@@ -2,7 +2,7 @@
   "name": "ElasticExportFashionDE",
   "namespace": "ElasticExportFashionDE",
   "type": "export",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "marketplaceName": {
     "de":"Fashion.de",
     "en":"Fashion.de"
@@ -10,9 +10,7 @@
   "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
   "pluginIcon": "icon_plugin_md.png",
   "price": 0.00,
-  "require": {
-    "ElasticExport": ">=1.0.18"
-  },
+  "require": ["ElasticExport"],
   "description": "This plugin adds the format Fashion.de to the Elastic Export.",
   "shortDescription": {
     "de": "Das Plugin ElasticExportFashionDE fügt das Datenformat FashionDE-Plugin zum Elastischen Export hinzu.",
