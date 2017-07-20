@@ -153,6 +153,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
         </td>
         <td>
             <b>Pflichtfeld</b><br>
+            <b>Beschränkung:</b> max. <b>250 Zeichen:</b>.
             <b>Inhalt:</b> Entsprechend der Formateinstellung <b>Artikelname</b>.
         </td>        
     </tr>
@@ -162,6 +163,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
         </td>
         <td>
             <b>Pflichtfeld</b><br>
+            <b>Beschränkung:</b> max. <b>3000 Zeichen:</b>.
             <b>Inhalt:</b> Die <b>Beschreibung</b> des Artikels abhängig der Formateinstellung <b>Beschreibung</b>.
         </td>        
     </tr>
@@ -179,7 +181,8 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
             art_url
         </td>
         <td>
-        	<b>Inhalt:</b> Der <b>URL-Pfad</b> des Artikels abhängig vom gewählten <b>Mandanten</b> in den Formateinstellungen.
+        	<b>Pflichtfeld</b><br>
+			<b>Inhalt:</b> Der <b>URL-Pfad</b> des Artikels abhängig vom gewählten <b>Mandanten</b> und der <b>Auftragsherkunft</b> in den Formateinstellungen.
         </td>        
     </tr>
     <tr>
@@ -187,7 +190,8 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
             art_img_url
         </td>
         <td>
-            <b>Beschränkung:</b> <b>Mindestgröße:</b> 300 x 300 Pixel. <b>Maximalgröße:</b> 6.600.000 Pixel<br>
+        	<b>Pflichtfeld</b><br>
+            <b>Beschränkung:</b> <b>Mindestgröße</b> 180 x 240 Pixel.
 			<b>Inhalt:</b> URL zu dem Bild gemäß der Formateinstellungen <b>Bild</b>. Variantenbilder werden vor Artikelbildern priorisiert.
         </td>        
     </tr>
@@ -196,6 +200,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
             waehrung
         </td>
         <td>
+        	<b>Pflichtfeld</b><br>
             <b>Inhalt:</b> Die <b>Währung</b> des hinterlegten Verkaufspreises.
         </td>        
     </tr>
@@ -204,6 +209,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
             art_preis
         </td>
         <td>
+        	<b>Pflichtfeld</b><br>
             <b>Inhalt:</b> Der <b>Verkaufspreis</b> der Variante, abhängig der Formateinstellung <b>Auftragsherkunft</b>.
         </td>        
     </tr>
@@ -221,7 +227,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
         </td>
         <td>
             <b>Pflichtfeld</b><br>
-            <b>Inhalt:</b> Der verknüpften <b>Attributswert "Farbe"</b> der Variante. Zu verknüpfen unter <b>Einstellungen » Artikel » Attribute » Attribut bearbeiten » Attributverknüpfung" mit dem Attribut "color" für Amazon.
+            <b>Inhalt:</b> Der verknüpften <b>Attributswert "Farbe"</b> der Variante. Zu verknüpfen unter <b>Einstellungen » Artikel » Attribute » Attribut bearbeiten » Attributverknüpfung"</b> mit dem Attribut "color" für Amazon.
         </td>        
     </tr>
     <tr>
@@ -230,7 +236,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
         </td>
         <td>
         	<b>Pflichtfeld</b><br>
-			<b>Inhalt:</b> Der verknüpften <b>Attributswert "Farbe"</b> der Variante. Zu verknüpfen unter <b>Einstellungen » Artikel » Attribute » Attribut bearbeiten » Attributverknüpfung" mit dem Attribut "size" für Amazon.
+			<b>Inhalt:</b> Der verknüpften <b>Attributswert "Größe"</b> der Variante. Zu verknüpfen unter <b>Einstellungen » Artikel » Attribute » Attribut bearbeiten » Attributverknüpfung"</b> mit dem Attribut "size" für Amazon.
         </td>        
     </tr>
     <tr>
@@ -262,7 +268,8 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
             art_grundpreis
         </td>
         <td>
-            <b>Inhalt:</b> Die <b>Grundpreisinformation</b> im Format "Preis / Einheit" abhängig der Einstellung <b>Sprache</b>.
+        	<b>Pflichtfeld</b><br>
+            <b>Inhalt:</b> Die <b>Grundpreisinformation</b> im Format "Preis / Einheit" abhängig der Formateinstellung <b>Sprache</b>.
         </td>        
     </tr>
 </table>
