@@ -226,7 +226,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
             <b>Required</b><br>
-            The linked <b>attribute value "color"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "color" for amazon.
+            The linked <b>attribute value "color"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "color" for Amazon.
         </td>        
     </tr>
     <tr>
@@ -235,7 +235,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
         	<b>Required</b><br>
-			The linked <b>attribute value "size"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "size" for amazon.
+			The linked <b>attribute value "size"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "size" for Amazon.
         </td>        
     </tr>
     <tr>
