@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export Fashion.de
 
+## v1.0.6 (2017-08-30)
+
+### Behoben
+- Preise werden nun in der richtigen Spalte ausgegeben.
+
 ## v1.0.5 (2017-07-29)
 
 ### Geändert
