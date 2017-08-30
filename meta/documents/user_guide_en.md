@@ -217,7 +217,7 @@ The following table lists details for settings, format settings and recommended 
             art_marke
         </td>
         <td>
-            <b>Content:</b> The <b>name of the manufacturer</b> of the item. The <b>external name</b> within the menu <b>Settings » Items » Manufacturer</b> will be preferred if existing.
+            <b>Content:</b> The <b>name of the manufacturer</b> of the item. The <b>external name</b> set in the menu <b>Settings » Items » Manufacturer</b> will be preferred if existing.
         </td>        
     </tr>
     <tr>
@@ -226,7 +226,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
             <b>Required</b><br>
-            <b>Content:</b> The linked <b>attribute value "color"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "color" for Amazon.
+            <b>Content:</b> The linked <b>attribute value "color"</b> of the variation. It is linked in the menu <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "color" for Amazon.
         </td>        
     </tr>
     <tr>
@@ -235,7 +235,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
         	<b>Required</b><br>
-			<b>Content:</b> The linked <b>attribute value "size"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "size" for Amazon.
+			<b>Content:</b> The linked <b>attribute value "size"</b> of the variation. It can be linked int the menu <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "size" for Amazon.
         </td>        
     </tr>
     <tr>
@@ -243,7 +243,7 @@ The following table lists details for settings, format settings and recommended 
             art_versand
         </td>
         <td>
-            <b>Content:</b> According to the format setting <b>shipping costs</b>.
+            <b>Content:</b> According to the format setting <b>Shipping costs</b>.
         </td>        
     </tr>
     <tr>
@@ -259,7 +259,7 @@ The following table lists details for settings, format settings and recommended 
             art_geschlecht
         </td>
         <td>
-            <b>Content:</b> The <b>gender</b> of the linked property of the variation. It is configurable within <b>Settings » Item » Properties"</b> with the webshop name "article_gender".
+            <b>Content:</b> The <b>gender</b> of the linked property of the variation. It can be linked in the menu <b>Settings » Item » Properties"</b> with the webshop name "article_gender".
         </td>        
     </tr>
     <tr>
