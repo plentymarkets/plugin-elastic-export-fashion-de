@@ -220,19 +220,7 @@ class FashionDE extends CSVPluginGenerator
 	private function getMain($variation, KeyValue $settings):array
 	{
 		// Get and set the price and rrp
-		$priceList = $this->elasticExportPriceHelper->getPriceList($variation, $settings, 2, ',');
-		$price = $priceList['recommendedRetailPrice'] < $priceList['price'] ? $priceList['recommendedRetailPrice'] : $priceList['price'];
-		$rrp = $priceList['recommendedRetailPrice'] < $priceList['price'] ? $priceList['price'] : $priceList['recommendedRetailPrice'];
-
-		if($price <= 0)
-		{
-			$price = '';
-		}
-
-		if($rrp <= 0)
-		{
-			$rrp =  '';
-		}
+        $priceList = $this->getPriceList($variation, $settings);
 
 		// Get shipping costs
 		$shippingCost = $this->elasticExportCoreHelper->getShippingCost($variation['data']['item']['id'], $settings);
@@ -249,18 +237,69 @@ class FashionDE extends CSVPluginGenerator
 			'art_url'           => $this->elasticExportCoreHelper->getMutatedUrl($variation, $settings),
 			'art_img_url'       => $this->elasticExportCoreHelper->getMainImage($variation, $settings),
 			'waehrung'          => $priceList['currency'],
-			'art_preis'         => (float)$price,
+			'art_preis'         => $priceList['price'],
 			'art_marke'         => substr(trim($this->elasticExportCoreHelper->getExternalManufacturerName((int)$variation['data']['item']['manufacturer']['id'])), 0, 20),
 			'art_farbe'         => [],
 			'art_groesse'       => [],
 			'art_versand'       => $shippingCost,
-			'art_sale_preis'    => $rrp,
+			'art_sale_preis'    => $priceList['salePrice'],
 			'art_geschlecht'    => $this->propertyHelper->getPropertyValueByBackendName($variation, 'article_gender'),
-			'art_grundpreis'    => $this->elasticExportPriceHelper->getBasePrice($variation, (float)$price, $settings->get('lang')),
+			'art_grundpreis'    => $priceList['basePrice'],
 		];
 
 		return $data;
 	}
+
+    /**
+     * @param  array    $variation
+     * @param  KeyValue $settings
+     * @return array
+     */
+    private function getPriceList(array $variation, KeyValue $settings):array
+    {
+        $price = $salePrice = $basePrice = '';
+
+        $priceList = $this->elasticExportPriceHelper->getPriceList($variation, $settings, 2, ',');
+
+        //determinate which price to use as 'art_preis'
+        //only use rrp if it is higher than the normal price
+        if($priceList['recommendedRetailPrice'] > 0.00 && $priceList['recommendedRetailPrice'] > $priceList['price'])
+        {
+            $price = $priceList['recommendedRetailPrice'];
+        }
+        elseif($priceList['price'] > 0.00)
+        {
+            $price = $priceList['price'];
+        }
+
+        //determinate which price to use as 'art_sale_preis'
+        //only use specialPrice if it is set and the lowest price available
+        if($priceList['specialPrice'] > 0.00 && $priceList['specialPrice'] < $price && $priceList['specialPrice'] < $priceList['price'])
+        {
+            $salePrice = $priceList['specialPrice'];
+        }
+        elseif($priceList['price'] > 0.00 && $priceList['price'] < $price)
+        {
+            $salePrice = $priceList['price'];
+        }
+
+        //determinate with which price the base price has to be calculated
+        if($salePrice > 0.00)
+        {
+            $basePrice = $this->elasticExportPriceHelper->getBasePrice($variation, (float)$salePrice, $settings->get('lang'));
+        }
+        elseif($price > 0.00)
+        {
+            $basePrice = $this->elasticExportPriceHelper->getBasePrice($variation, (float)$price, $settings->get('lang'));
+        }
+
+        return [
+            'price'     => $price,
+            'salePrice' => $salePrice,
+            'currency'  => $priceList['currency'],
+            'basePrice' => $basePrice,
+        ];
+    }
 
 	/**
 	 * Get variation attributes.

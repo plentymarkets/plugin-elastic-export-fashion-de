@@ -143,7 +143,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
             <b>Required</b><br>
-            The <b>ID</b> of the variation.
+            <b>Content:</b> The <b>ID</b> of the variation.
         </td>        
     </tr>
     <tr>
@@ -153,7 +153,7 @@ The following table lists details for settings, format settings and recommended 
         <td>
             <b>Required</b><br>
             <b>Restriction:</b> max. <b>250 characters:</b>.
-            According the format setting <b>Item name</b>.
+            <b>Content:</b> According the format setting <b>Item name</b>.
         </td>        
     </tr>
     <tr>
@@ -163,7 +163,7 @@ The following table lists details for settings, format settings and recommended 
         <td>
             <b>Required</b><br>
             <b>Restriction:</b> max. <b>3000 characters:</b>.
-            The <b>description</b> of the item depending on the format setting <b>Description</b>.
+            <b>Content:</b> The <b>description</b> of the item depending on the format setting <b>Description</b>.
         </td>        
     </tr>
     <tr>
@@ -172,7 +172,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
             <b>Required</b><br>
-            The <b>category path of the default category</b> for the defined client in the format settings.
+            <b>Content:</b> The <b>category path of the default category</b> for the defined client in the format settings.
         </td>        
     </tr>
     <tr>
@@ -181,7 +181,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
         	<b>Required</b><br>
-			The product URL according to the format setting <b>product URL</b> and <b>order referrer</b>.
+			<b>Content:</b> The product URL according to the format setting <b>product URL</b> and <b>order referrer</b>.
         </td>        
     </tr>
     <tr>
@@ -191,7 +191,7 @@ The following table lists details for settings, format settings and recommended 
         <td>
         	<b>Required</b><br>
             <b>Restriction:</b> <b>Minimum size</b> 180 x 240 pixel.
-			URL of the image according to the format setting <b>Image</b>. Variation images are prioritized over item images.
+			<b>Content:</b> URL of the image according to the format setting <b>Image</b>. Variation images are prioritized over item images.
         </td>        
     </tr>
     <tr>
@@ -200,7 +200,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
         	<b>Required</b><br>
-            The <b>currency</b> of the deposited retail price.
+            <b>Content:</b> The <b>currency</b> of the deposited retail price.
         </td>        
     </tr>
     <tr>
@@ -209,7 +209,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
         	<b>Required</b><br>
-            The <b>retail price</b> of the variation, depending on the format setting <b>order referrer</b>.
+            <b>Content:</b> The <b>sales price</b> of the variation. If the <b>RRP</b> was activated in the format settings and is higher than the sales price the RRP will be used here.
         </td>        
     </tr>
     <tr>
@@ -217,7 +217,7 @@ The following table lists details for settings, format settings and recommended 
             art_marke
         </td>
         <td>
-            The <b>name of the manufacturer</b> of the item. The <b>external name</b> within the menu <b>Settings » Items » Manufacturer</b> will be preferred if existing.
+            <b>Content:</b> The <b>name of the manufacturer</b> of the item. The <b>external name</b> within the menu <b>Settings » Items » Manufacturer</b> will be preferred if existing.
         </td>        
     </tr>
     <tr>
@@ -226,7 +226,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
             <b>Required</b><br>
-            The linked <b>attribute value "color"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "color" for Amazon.
+            <b>Content:</b> The linked <b>attribute value "color"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "color" for Amazon.
         </td>        
     </tr>
     <tr>
@@ -235,7 +235,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
         	<b>Required</b><br>
-			The linked <b>attribute value "size"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "size" for Amazon.
+			<b>Content:</b> The linked <b>attribute value "size"</b> of the variation. It is linkable within <b>Settings » Item » Attributes » Edit attribute » Attribute link"</b> with the attribute "size" for Amazon.
         </td>        
     </tr>
     <tr>
@@ -243,7 +243,7 @@ The following table lists details for settings, format settings and recommended 
             art_versand
         </td>
         <td>
-            According to the format setting <b>shipping costs</b>.
+            <b>Content:</b> According to the format setting <b>shipping costs</b>.
         </td>        
     </tr>
     <tr>
@@ -251,7 +251,7 @@ The following table lists details for settings, format settings and recommended 
             art_sale_preis
         </td>
         <td>
-            The <b>sales price</b> of the variation.
+            <b>Content:</b> If the format setting <b>RRP</b> and/or <b>Offer price</b> was activated, the sales price or offer price will be used here.
         </td>        
     </tr>
     <tr>
@@ -259,7 +259,7 @@ The following table lists details for settings, format settings and recommended 
             art_geschlecht
         </td>
         <td>
-            The <b>gender</b> of the linked property of the variation. It is configurable within <b>Settings » Item » Properties"</b> with the internal name "article_gender".
+            <b>Content:</b> The <b>gender</b> of the linked property of the variation. It is configurable within <b>Settings » Item » Properties"</b> with the webshop name "article_gender".
         </td>        
     </tr>
     <tr>
@@ -268,7 +268,7 @@ The following table lists details for settings, format settings and recommended 
         </td>
         <td>
         	<b>Required</b><br>
-            The <b>base price information</b> in the format "price / unit" depending on the format setting <b>Language</b>.
+            <b>Content:</b> The <b>base price information</b> in the format "price / unit" depending on the format setting <b>Language</b>.
         </td>        
     </tr>
 </table>

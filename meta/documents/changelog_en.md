@@ -1,5 +1,10 @@
 # Release Notes for Elastic Export Fashion.de
 
+## v1.0.6 (2017-08-30)
+
+### Fixed
+- The prices are now exported in the correct column.
+
 ## v1.0.5 (2017-07-29)
 
 ### Changed

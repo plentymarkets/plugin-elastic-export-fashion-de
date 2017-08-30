@@ -210,7 +210,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
         </td>
         <td>
         	<b>Pflichtfeld</b><br>
-            <b>Inhalt:</b> Der <b>Verkaufspreis</b> der Variante, abhängig der Formateinstellung <b>Auftragsherkunft</b>.
+            <b>Inhalt:</b> Der <b>Verkaufspreis</b> der Variante. Wenn der <b>UVP</b> in den Formateinstellungen aktiviert wurde und höher ist als der Verkaufspreis, wird dieser hier eingetragen.
         </td>        
     </tr>
     <tr>
@@ -252,7 +252,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
             art_sale_preis
         </td>
         <td>
-            <b>Inhalt:</b> Der <b>Angebotspreis</b> der Variante.
+            <b>Inhalt:</b> Wenn die Formateinstellung <b>UVP</b> und/oder <b>Angebotspreis</b> aktiviert wurde, steht hier der Verkaufspreis oder Angebotspreis.
         </td>        
     </tr>
     <tr>
@@ -260,7 +260,7 @@ In der folgenden Tabelle finden Sie spezifische Hinweise zu den Einstellungen, F
             art_geschlecht
         </td>
         <td>
-            <b>Inhalt:</b> Das <b>Geschlecht</b> des hinterlegten Merkmals an der Variante. Zu konfigurieren unter <b>Einstellungen » Artikel » Merkmale"</b> mit internen Namen "article_gender".
+            <b>Inhalt:</b> Das <b>Geschlecht</b> des hinterlegten Merkmals an der Variante. Zu konfigurieren unter <b>Einstellungen » Artikel » Merkmale"</b> mit dem Webshop Namen "article_gender".
         </td>        
     </tr>
     <tr>
