@@ -3,7 +3,7 @@
 ## v1.0.6 (2017-08-30)
 
 ### Fixed
-- Prices are now exported in the correct column.
+- Prices are now exported into the correct column.
 
 ## v1.0.5 (2017-07-29)
 
