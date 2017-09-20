@@ -1,5 +1,10 @@
 # Release Notes for Elastic Export Fashion.de
 
+## v1.0.7 (2017-08-30)
+
+### Fixed
+- Renamed currency column from "waehrung" to "art_waehrung"
+
 ## v1.0.6 (2017-08-30)
 
 ### Fixed

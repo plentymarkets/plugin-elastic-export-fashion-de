@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export Fashion.de
 
+## v1.0.7 (2017-09-20)
+
+### Behoben
+- Spaltenbezeichnung "waehrung" in "art_waehrung" unbennant
+
 ## v1.0.6 (2017-08-30)
 
 ### Behoben
