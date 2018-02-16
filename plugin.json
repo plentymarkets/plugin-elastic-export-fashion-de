@@ -2,7 +2,7 @@
   "name": "ElasticExportFashionDE",
   "namespace": "ElasticExportFashionDE",
   "type": "export",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "marketplaceName": {
     "de":"Fashion.de",
     "en":"Fashion.de"
@@ -13,8 +13,8 @@
   "require": ["ElasticExport"],
   "description": "This plugin adds the format Fashion.de to the Elastic Export.",
   "shortDescription": {
-    "de": "Das Plugin ElasticExportFashionDE fügt das Datenformat FashionDE-Plugin zum Elastischen Export hinzu.",
-    "en": "This plugin adds the format FashionDE-Plugin to the Elastic Export."
+    "de": "Die Integration des Datenformats FashionDE-Plugin ermöglicht die Artikeldatenübertragung zum Preisportal Fashion.de über den elastischen Export.",
+    "en": "The integration of the data format FashionDE-Plugin enables the transfer of item data to the price search engine Fashion.de via the elastic export."
   },
   "categories": [
     "3523"
