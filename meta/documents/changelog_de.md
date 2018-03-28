@@ -1,5 +1,11 @@
 # Release Notes für Elastic Export Fashion.de
 
+## v1.0.9 (2018-03-28)
+
+### Geändert
+- Die Klasse FiltrationService übernimmt die Filtrierung der Varianten.
+- Vorschaubilder aktualisiert.
+
 ## v1.0.8 (2018-02-16)
 
 ### Geändert
