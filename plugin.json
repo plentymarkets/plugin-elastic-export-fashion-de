@@ -2,11 +2,8 @@
   "name": "ElasticExportFashionDE",
   "namespace": "ElasticExportFashionDE",
   "type": "export",
-  "version": "1.0.8",
-  "marketplaceName": {
-    "de":"Fashion.de",
-    "en":"Fashion.de"
-  },
+  "version": "1.0.9",
+  "marketplaceName": "Fashion.de",
   "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
   "pluginIcon": "icon_plugin_md.png",
   "price": 0.00,
@@ -16,9 +13,7 @@
     "de": "Die Integration des Datenformats FashionDE-Plugin ermöglicht die Artikeldatenübertragung zum Preisportal Fashion.de über den elastischen Export.",
     "en": "The integration of the data format FashionDE-Plugin enables the transfer of item data to the price search engine Fashion.de via the elastic export."
   },
-  "categories": [
-    "3523"
-  ],
+  "categories": ["3523"],
   "author": "plentymarkets GmbH",
   "authorIcon": "icon_author_xs.png",
   "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider"

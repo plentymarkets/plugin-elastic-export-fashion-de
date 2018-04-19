@@ -5,6 +5,7 @@ namespace ElasticExportFashionDE\Generator;
 use ElasticExport\Helper\ElasticExportCoreHelper;
 use ElasticExport\Helper\ElasticExportPriceHelper;
 use ElasticExport\Helper\ElasticExportStockHelper;
+use ElasticExport\Services\FiltrationService;
 use ElasticExportFashionDE\Helper\PropertyHelper;
 use Plenty\Modules\DataExchange\Contracts\CSVPluginGenerator;
 use Plenty\Modules\Helper\Services\ArrayHelper;
@@ -57,6 +58,11 @@ class FashionDE extends CSVPluginGenerator
 	 */
 	private $item;
 
+    /**
+     * @var FiltrationService
+     */
+    private $filtrationService;
+
 	/**
 	 * FashionDE constructor.
 	 *
@@ -88,6 +94,7 @@ class FashionDE extends CSVPluginGenerator
 		$this->elasticExportPriceHelper = pluginApp(ElasticExportPriceHelper::class);
 
 		$settings = $this->arrayHelper->buildMapFromObjectList($formatSettings, 'key', 'value');
+		$this->filtrationService = pluginApp(FiltrationService::class, [$settings, $filter]);
 
 		$this->setDelimiter("	");
 
@@ -143,7 +150,7 @@ class FashionDE extends CSVPluginGenerator
 							break;
 						}
 
-						if($this->elasticExportStockHelper->isFilteredByStock($variation, $filter) === true)
+						if($this->filtrationService->filter($variation))
 						{
 							continue;
 						}
