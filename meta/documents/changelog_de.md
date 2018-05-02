@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export Fashion.de
 
+## v1.0.10 (2018-04-30)
+
+### Geändert
+- Laravel 5.5 Update.
+
 ## v1.0.9 (2018-03-28)
 
 ### Geändert

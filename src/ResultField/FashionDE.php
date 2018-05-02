@@ -2,6 +2,7 @@
 
 namespace ElasticExportFashionDE\ResultField;
 
+use Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Source\Mutator\BuiltIn\LanguageMutator;
 use Plenty\Modules\DataExchange\Contracts\ResultFields;
 use Plenty\Modules\Helper\Services\ArrayHelper;
@@ -44,7 +45,9 @@ class FashionDE extends ResultFields
 
 		$reference = $settings->get('referrerId') ? $settings->get('referrerId') : -1;
 
-		$this->setOrderByList(['variation.itemId', 'ASC']);
+		$this->setOrderByList([
+			'path' => 'variation.itemId',
+			'order' => ElasticSearch::SORTING_ORDER_ASC]);
 
 		$itemDescriptionFields = ['texts.urlPath'];
 
@@ -95,7 +98,7 @@ class FashionDE extends ResultFields
 		/**
 		 * @var LanguageMutator $languageMutator
 		 */
-		$languageMutator = pluginApp(LanguageMutator::class, [[$settings->get('lang')]]);
+		$languageMutator = pluginApp(LanguageMutator::class, ['languages' => [$settings->get('lang')]]);
 
 		/**
 		 * @var KeyMutator $keyMutator
