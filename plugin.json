@@ -2,8 +2,11 @@
   "name": "ElasticExportFashionDE",
   "namespace": "ElasticExportFashionDE",
   "type": "export",
-  "version": "1.0.10",
-  "marketplaceName": "Fashion.de",
+  "version": "1.0.11",
+  "marketplaceName":  {
+    "de": "Fashion.de",
+    "en": "Fashion.de"
+  },
   "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
   "pluginIcon": "icon_plugin_md.png",
   "price": 0.00,
