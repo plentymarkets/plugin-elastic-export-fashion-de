@@ -1,6 +1,6 @@
 # Release Notes for Elastic Export Fashion.de
 
-## v1.0.11 (2018-06-11)
+## v1.0.11 (2018-07-02)
 
 ### Changed
 - Further information about setting up the plugin was added to the user guide.
