@@ -10,7 +10,7 @@ Fashion.de is a price comparison portal for fashion and lifestyle. Please note t
 
 By installing this plugin you will receive the export format **FashionDE-Plugin**. Use this format to exchange data between plentymarkets and Fashion.de. It is required to install the plugin **Elastic Export** from the plentyMarketplace first before you can use the format FashionDE-Plugin in plentymarkets.
 
-Once both plugins are installed, you can create the export format FashionDE-Plugin. Refer to the [Exporting data formats for price search engines](https://knowledge.plentymarkets.com/en/basics/data-exchange/export-import/exporting-data#30) page of the manual for further details about the individual format settings.
+Once both plugins are installed, you can create the export format FashionDE-Plugin. Refer to the [Elastic Export](https://knowledge.plentymarkets.com/en/basics/data-exchange/elastic-export) page of the manual for further details about the individual format settings.
 
 Creating a new export format:
 

@@ -2,7 +2,7 @@
   "name": "ElasticExportFashionDE",
   "namespace": "ElasticExportFashionDE",
   "type": "export",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "marketplaceName":  {
     "de": "Fashion.de",
     "en": "Fashion.de"
@@ -16,7 +16,7 @@
     "de": "Die Integration des Datenformats FashionDE-Plugin ermöglicht die Artikeldatenübertragung zum Preisportal Fashion.de über den elastischen Export.",
     "en": "The integration of the data format FashionDE-Plugin enables the transfer of item data to the price search engine Fashion.de via the elastic export."
   },
-  "categories": ["3523"],
+  "categories": ["3880"],
   "author": "plentymarkets GmbH",
   "authorIcon": "icon_author_xs.png",
   "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider"
