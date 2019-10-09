@@ -4,21 +4,21 @@
 
 ## 1 Registering with Fashion.de
 
-Fashion.de is a price comparison portal for fashion and lifestyle. Please note that this website is currently only available in German. For further information we suggest you to check the extra steps [here](http://www.fashion.de/shops/Fashion-Info/Partner-werden/).
+Fashion.de is a price comparison portal for fashion and lifestyle. Please note that this website is currently only available in German. For further information we suggest to check the extra steps [here](http://www.fashion.de/shops/Fashion-Info/Partner-werden/).
 
 ## 2 Setting up the data format FashionDE-Plugin in plentymarkets
 
-By installing this plugin you will receive the export format **FashionDE-Plugin**. Use this format to exchange data between plentymarkets and Fashion.de. It is required to install the plugin **Elastic Export** from the plentyMarketplace first before you can use the format FashionDE-Plugin in plentymarkets.
+By installing this plugin, you will receive the export format **FashionDE-Plugin**. Use this format to exchange data between plentymarkets and Fashion.de. It is required to install the plugin **Elastic Export** from the plentyMarketplace first before you can use the format FashionDE-Plugin in plentymarkets.
 
-Once both plugins are installed, you can create the export format FashionDE-Plugin. Refer to the [Elastic Export](https://knowledge.plentymarkets.com/en/basics/data-exchange/elastic-export) page of the manual for further details about the individual format settings.
+Once both plugins are installed, you can create the export format FashionDE-Plugin. Refer to the [Elastic Export](https://knowledge.plentymarkets.com/en/data/exporting-data/elastic-export) page of the manual for further details about the individual format settings.
 
 Creating a new export format:
 
 1. Go to **Data » Elastic export**.
 2. Click on **New export**.
 3. Carry out the settings as desired. Pay attention to the information given in table 1.
-4. **Save** the settings.
-→ The export format will be given an ID and it will appear in the overview within the **Exports** tab.
+4. **Save** the settings.<br/>
+→ The export format is given an ID and it appears in the overview within the **Exports** tab.
 
 The following table lists details for settings, format settings and recommended item filters for the format **FashionDE-Plugin**.
 
@@ -39,8 +39,8 @@ The following table lists details for settings, format settings and recommended 
 | **Product URL**                                       | Choose which URL should be transferred to the price comparison portal, the item’s URL or the variation’s URL. Variation SKUs can only be transferred in combination with the Ceres store. |
 | **Client**                                            | Select a client. This setting is used for the URL structure. |
 | **URL parameter**                                     | Enter a suffix for the product URL if this is required for the export. If you have activated the transfer option for the product URL further up, then this character string will be added to the product URL. |
-| **Order referrer**                                    | Choose the order referrer that should be assigned during the order import from the drop-down list. |
-| **Marketplace account**                               | Select the marketplace account from the drop-down list. The selected referrer is added to the product URL so that sales can be analysed later. |
+| **Order referrer**                                    | Choose the order referrer that should be assigned during the order import from the drop-down list. The selected referrer is added to the product URL so that sales can be analysed later. |
+| **Marketplace account**                               | Select the marketplace account from the drop-down list. |
 | **Language**                                          | Select the language from the drop-down list. |
 | **Item name**                                         | Select **Name 1**, **Name 2** or **Name 3**. These names are saved in the **Texts** tab of the item. Enter a number into the **Maximum number of characters (def. Text)** field if desired. This specifies how many characters should be exported for the item name. |
 | **Preview text**                                      | This option does not affect this format. |
@@ -76,12 +76,12 @@ Go to **Data » Elastic export** and open the data format **FashionDE-Plugin** i
 | art_img_url            | **Required**<br/> Restriction: Minimum size 180 x 240 pixels<br/> URL of the image according to the format setting **Image**. Variation images are prioritised over item images. |
 | art_waehrung           | **Required**<br/> The currency of the saved retail price. |
 | art_preis              | **Required**<br/> The sales price of the variation. If the RRP was activated in the format settings and is higher than the sales price, the RRP is used here. |
-| art_marke              | The **name of the manufacturer** of the item. The **external name** set in the menu **System » Item » Manufacturer** is preferred if existing. |
-| art_farbe              | **Required**<br/> The linked attribute value "color" of the variation. It can be linked in the menu **System » Item » Attributes » Edit attribute » Attribute link** with the attribute "color" for Amazon. |
-| art_groesse            | **Required**<br/> The linked attribute value "size" of the variation. It can be linked in the menu **System » Item » Attributes » Edit attribute » Attribute link** with the attribute "size" for Amazon. |
+| art_marke              | The **name of the manufacturer** of the item. The **external name** set in the menu **Setup » Item » Manufacturer** is preferred if existing. |
+| art_farbe              | **Required**<br/> The linked attribute value "color" of the variation. It can be linked in the menu **Setup » Item » Attributes » Edit attribute » Attribute link** with the attribute "color" for Amazon. |
+| art_groesse            | **Required**<br/> The linked attribute value "size" of the variation. It can be linked in the menu **Setup » Item » Attributes » Edit attribute » Attribute link** with the attribute "size" for Amazon. |
 | art_versand            | According to the format setting **Shipping costs**. |
 | art_sale_preis         | If the format setting **RRP** and/or **Offer price** was activated, the sales price or offer price is used here. |
-| art_geschlecht         | The gender of the linked property of the variation. It can be linked in the menu **System » Item » Properties** with the webshop name "article_gender". |
+| art_geschlecht         | The gender of the linked property of the variation. It can be linked in the menu **Setup » Item » Properties** with the webshop name "article_gender". |
 | art_grundpreis         | **Required**<br/> The base price information in the format "price/unit" depending on the format setting **Language**. |
 
 ## 4 License

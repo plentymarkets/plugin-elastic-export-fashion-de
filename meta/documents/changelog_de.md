@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export Fashion.de
 
+## v1.0.13 (2019-10-09)
+
+### Geändert
+- Der User Guide wurde überarbeitet (Form der Anrede geändert, fehlerhafte Links korrigiert).
+
 ## v1.0.12 (2019-01-21)
 
 ### Geändert
