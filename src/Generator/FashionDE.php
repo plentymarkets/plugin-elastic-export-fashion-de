@@ -133,14 +133,14 @@ class FashionDE extends CSVPluginGenerator
 
 				$resultList = $elasticSearch->execute();
 
-				if(count($resultList['error']) > 0)
+				if(count($resultList['error'] ?? []) > 0)
 				{
 					$this->getLogger(__METHOD__)->error('ElasticExportFashionDE::log.occurredElasticSearchErrors', [
 						'error message' => $resultList['error'],
 					]);
 				}
 
-				if(is_array($resultList['documents']) && count($resultList['documents']) > 0)
+				if(is_array($resultList['documents']) && count($resultList['documents'] ?? []) > 0)
 				{
 					foreach($resultList['documents'] as $variation)
 					{
@@ -346,7 +346,7 @@ class FashionDE extends CSVPluginGenerator
 			$this->item[$variation['data']['item']['id']] = $this->getMain($variation, $settings);
 		}
 
-		if(array_key_exists($variation['data']['item']['id'], $this->item) && count($variation['data']['attributes']) > 0)
+		if(array_key_exists($variation['data']['item']['id'], $this->item) && count($variation['data']['attributes'] ?? []) > 0)
 		{
 			$variationAttributes = $this->getVariationAttributes($variation, $settings);
 
