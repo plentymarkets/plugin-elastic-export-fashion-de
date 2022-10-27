@@ -132,8 +132,7 @@ class FashionDE extends CSVPluginGenerator
 				}
 
 				$resultList = $elasticSearch->execute();
-
-				if(count($resultList['error'] ?? []) > 0)
+                if(!empty($resultList['error']))
 				{
 					$this->getLogger(__METHOD__)->error('ElasticExportFashionDE::log.occurredElasticSearchErrors', [
 						'error message' => $resultList['error'],
