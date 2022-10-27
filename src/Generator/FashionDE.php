@@ -139,7 +139,7 @@ class FashionDE extends CSVPluginGenerator
 					]);
 				}
 
-				if(is_array($resultList['documents']) && !empty($resultList['documents']))
+				if(is_array($resultList['documents']) && count($resultList['documents'] ?? []) > 0)
 				{
 					foreach($resultList['documents'] as $variation)
 					{
