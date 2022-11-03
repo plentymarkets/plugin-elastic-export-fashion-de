@@ -21,5 +21,8 @@
   "categories": ["3880"],
   "author": "plentysystems AG",
   "authorIcon": "icon_author_xs.png",
-  "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider"
+  "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider",
+  "platform": {
+    "php": ">=7.3 <8.1"
+  }
 }
