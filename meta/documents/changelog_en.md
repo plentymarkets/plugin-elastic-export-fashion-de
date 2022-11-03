@@ -3,7 +3,7 @@
 ## v1.0.16 (2022-11-03)
 
 ### Changed
-- UPDATE - Added PHP 8 compatibility flag.
+- Added PHP 8 compatibility flag.
 
 ## v1.0.15 (2022-10-27)
 
