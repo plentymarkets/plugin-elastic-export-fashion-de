@@ -2,7 +2,7 @@
   "name": "ElasticExportFashionDE",
   "namespace": "ElasticExportFashionDE",
   "type": "export",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "marketplaceName":  {
     "de": "Fashion.de",
     "en": "Fashion.de"
@@ -21,5 +21,8 @@
   "categories": ["3880"],
   "author": "plentysystems AG",
   "authorIcon": "icon_author_xs.png",
-  "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider"
+  "serviceProvider": "ElasticExportFashionDE\\ElasticExportFashionDEServiceProvider",
+  "platform": {
+    "php": ">=7.3 <8.1"
+  }
 }

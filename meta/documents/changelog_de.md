@@ -1,5 +1,10 @@
 # Release Notes für Elastic Export Fashion.de
 
+## v1.0.16 (2022-11-03)
+
+### Geändert
+- Das Plugin wurde als kompatibel mit PHP8 gekennzeichnet.
+
 ## v1.0.15 (2022-10-27)
 
 ### Geändert
