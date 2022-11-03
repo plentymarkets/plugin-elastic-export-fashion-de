@@ -1,5 +1,10 @@
 # Release Notes for Elastic Export Fashion.de
 
+## v1.0.16 (2022-11-03)
+
+### Changed
+- UPDATE - Added PHP 8 flag.
+
 ## v1.0.15 (2022-10-27)
 
 ### Changed
